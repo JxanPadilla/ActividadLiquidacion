@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ejemplo</string>
+    <string name="salir">SALIR</string>
+    <string name="liquidaci_n">Liquidación</string>
 </resources>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".cuarta">
 
     <TextView
         android:id="@+id/tv_sueldo"
@@ -51,15 +52,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_sueldoNeto"
+        android:id="@+id/tv_subTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="404dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="#FF0000"
-        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#6A6767"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,14 +82,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_salj"
+        android:id="@+id/btn_salir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#720DFF"
-        android:text="@string/salir"
+        android:text="SALIR"
         android:textColorHighlight="#673AB7"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +104,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="@string/liquidaci_n"
+        android:text="Liquidaciòn"
         android:textColor="#1FAA24"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
