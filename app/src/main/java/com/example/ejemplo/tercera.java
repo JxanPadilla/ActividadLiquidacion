@@ -2,6 +2,7 @@ package com.example.ejemplo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,9 @@ public class tercera extends AppCompatActivity {
     private TextView tvalorDias;
 
     private TextView tsueldoNeto;
+    private TextView tsubtotal;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,7 @@ public class tercera extends AppCompatActivity {
         tdias = findViewById(R.id.tv_dias);
         tvalorDias = findViewById(R.id.tv_valorDias);
         tsueldoNeto = findViewById(R.id.tv_sueldoNeto);
+        tsubtotal = findViewById(R.id.subT);
         Button btn_sal = findViewById(R.id.btn_salj);
 
         btn_sal.setOnClickListener(new View.OnClickListener(){
@@ -41,16 +45,19 @@ public class tercera extends AppCompatActivity {
         String Cargo = getIntent().getStringExtra("Cargo");
         int SueldoB = getIntent().getIntExtra("SueldoB", 0);
         int Dias = getIntent().getIntExtra("Dias", 0);
+        int ValorDias = getIntent().getIntExtra("ValorDias", 0);
         String Diass = String.valueOf(Dias);
-        int ValorDias = SueldoB / 30;
         int SueldoNeto = getIntent().getIntExtra("SueldoNeto", 0);
+        int SubTotal = getIntent().getIntExtra("SubTotal", 0);
 
-        tnombre.setText(Nombre+Apellido);
+        tnombre.setText(Nombre+" "+Apellido);
         tcargo.setText(Cargo);
         tsueldo.setText("Sueldo: "+String.valueOf(SueldoB));
         tdias.setText("Dias trabajados: "+Diass);
         tvalorDias.setText(String.valueOf("Valor por día: "+ValorDias));
+        tsubtotal.setText("Subtotal: " +SubTotal);
         tsueldoNeto.setText("Sueldo Neto: " +SueldoNeto);
+
 
     }
 }

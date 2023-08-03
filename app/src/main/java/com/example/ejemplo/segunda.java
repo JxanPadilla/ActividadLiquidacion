@@ -93,6 +93,9 @@ public class segunda extends AppCompatActivity {
                 } else {
                       int SueldoB = Integer.parseInt(Sueldo);
                       int Dias = Integer.parseInt(Dia);
+                      int ValorDias = SueldoB / 30;
+                      int SubTotal = ValorDias*Dias;
+
                     if(Descuento==true){
                         SueldoD += SueldoB * 0.03;
                     }if(Salud==true){
@@ -110,7 +113,9 @@ public class segunda extends AppCompatActivity {
                     intent.putExtra("Cargo", Cargo);
                     intent.putExtra("SueldoB", SueldoB);
                     intent.putExtra("Dias", Dias);
+                    intent.putExtra("ValorDias", ValorDias);
                     intent.putExtra("SueldoNeto", SueldoNeto);
+                    intent.putExtra("SubTotal", SubTotal);
                     startActivity(intent);
                 }
 
